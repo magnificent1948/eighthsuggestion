@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE MAGNIFICENT EIGHTH</title>
+    <link rel="stylesheet" href="from.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            background-image: url('Picture1.png');   
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .form-container {
+            max-width: 100%;
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .form-container h1 {
+            text-align: center;
+            font-size: 1.8rem;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        input, select, textarea {
+            width: 100%; /* Full width inside the container */
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            box-sizing: border-box; /* Ensures consistent sizing */
+        }
+        textarea {
+            resize: vertical;
+        }
+        .feedback-questions {
+            margin-top: 20px;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 1rem;
+            width: 100%; /* Full width for better responsiveness */
+            margin-top: 15px; /* Added margin to lower the button */
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .form-container {
+                width: 95%;
+                padding: 15px;
+            }
+            .form-container h1 {
+                font-size: 1.5rem;
+                line-height: 1.2; /* Adjust line height to reduce spacing between lines */
+            }
+            input, select, textarea {
+                font-size: 0.9rem;
+            }
+            .feedback-questions label {
+                text-align: justify; /* Ensures text alignment is justified */
+            }
+            .submit-btn {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                margin: 0 auto; /* Centers the form horizontally */
+                padding: 10px;  /* Ensures proper spacing within the form */
+                width: 100%;    /* Takes full width of the screen */
+                box-sizing: border-box; /* Includes padding and border in the width */
+            }
+            .form-container h1 {
+                font-size: 1.2rem;
+                line-height: 1.1; /* Adjust line height further for even smaller screens */
+            }
+            input, select, textarea {
+                font-size: 0.8rem;
+            }
+            .feedback-questions label {
+                text-align: justify; /* Ensures text alignment is justified */
+            }
+            .submit-btn {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Adjust Submit Button Position */
+        @media (max-width: 768px) {
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .submit-btn {
+                align-self: flex-start; /* Align to bottom-left corner */
+            }
+        }
+
+        /* Marquee Responsiveness */
+        @media (max-width: 768px) {
+            marquee h1 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            marquee h1 {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <marquee behavior="alternate" direction="right">
+        <h1 style="color: white;">Your Valuable Suggestion is Important for us</h1>
+    </marquee>
+    <marquee behavior="alternate" direction="right" style="margin-top: -60px;">
+        <h1 style="color: white;">Be aware! this suggestion will directly be send to the CO</h1>
+    </marquee>
+    <form name="submit-to-google-sheet">
+        <div class="form-container">
+            <h1 style=" 
+                color: rgb(252, 252, 252); 
+                background-color: rgb(30, 96, 30); 
+                text-align: center; 
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+                padding: 10px;">
+                <!-- Left Image -->
+                <img src="crest.png" alt="Crest" style="width: 35px; height: auto; margin-right: 15px;">
+                <!-- Text -->
+                <span style="flex: 1; text-align: center; font-family: arialblack; text-decoration: underline; font-size: 24px;">MAGNIFICENT SUGGESTION PLATFORM</span>
+                <!-- Right Image -->
+                <img src="crest.png" alt="Crest" style="width: 35px; height: auto; margin-left: 15px;">
+            </h1>
+            <label for="Army Number">Army Number (Optional):-</label>
+            <input type="text" id="Army Number" autocomplete="off" name="Army Number">
+
+            <label for="rank">Rank (Optional):-</label>
+            <select name="Rank" id="rank">
+                <option value="" disabled selected>-- Select your rank --</option>
+                <option value="AV/GD">AV/GD</option>
+                <option value="AV/CLK">AV/CLK</option>
+                <option value="RFN">RFN</option>
+                <option value="LNK">LNK</option>
+                <option value="NK">NK</option>
+                <option value="HAV">HAV</option>
+                <option value="NB SUB">NB SUB</option>
+                <option value="SUB">SUB</option>
+            </select>
+
+            <label for="Name">Enter Your Name (Optional):-</label>
+            <input type="text" id="name" name="Name" autocomplete="off" placeholder="Please enter a valid name.">
+
+            <label for="unit">Coy (Optional):-</label>
+            <input type="text" id="unit" name="Coy" autocomplete="off" placeholder="Type A, B, C, D, SP, HQ">
+            <ul id="suggestions" style="border: 1px solid #ccc; display: none; position: absolute; background: white; z-index: 1000; list-style: none; margin: 0; padding: 5px;"></ul>
+            <div id="error-message" style="color: red; font-size: 0.9rem; display: none; margin-top: 5px;"></div> <!-- Error message container -->
+            
+            <script>
+                const coyInput = document.getElementById('unit');
+                const suggestionsList = document.getElementById('suggestions');
+                const errorMessage = document.getElementById('error-message');
+            
+                // Define the suggestions
+                const suggestions = ['A COY', 'B COY', 'C COY', 'D COY', 'SP COY', 'HQ COY'];
+            
+                // Event listener for input
+                coyInput.addEventListener('input', () => {
+                    const inputValue = coyInput.value.toUpperCase(); // Convert to uppercase for comparison
+                    suggestionsList.innerHTML = ''; // Clear previous suggestions
+                    errorMessage.style.display = 'none'; // Hide error message during input
+            
+                    if (inputValue) {
+                        // Filter suggestions based on input
+                        const filteredSuggestions = suggestions.filter(suggestion =>
+                            suggestion.startsWith(inputValue)
+                        );
+            
+                        // Populate suggestions if any match
+                        if (filteredSuggestions.length > 0) {
+                            filteredSuggestions.forEach(suggestion => {
+                                const li = document.createElement('li');
+                                li.textContent = suggestion;
+                                li.style.cursor = 'pointer';
+                                li.style.padding = '5px';
+            
+                                // Add click event to populate the input with the selected suggestion
+                                li.addEventListener('click', () => {
+                                    coyInput.value = suggestion; // Set input value to the selected suggestion
+                                    suggestionsList.style.display = 'none'; // Hide suggestions
+                                });
+            
+                                suggestionsList.appendChild(li);
+                            });
+                            suggestionsList.style.display = 'block'; // Show suggestions
+                        } else {
+                            suggestionsList.style.display = 'none'; // Hide suggestions if no match
+                        }
+                    } else {
+                        suggestionsList.style.display = 'none'; // Hide suggestions if input is empty
+                    }
+                });
+            
+                // Validate input on blur (when the user leaves the input field)
+                coyInput.addEventListener('blur', () => {
+                    const inputValue = coyInput.value.toUpperCase();
+                    if (inputValue && !suggestions.some(suggestion => suggestion === inputValue)) {
+                        // If input is invalid, show an error message
+                        errorMessage.textContent = 'Please enter a valid Coy (A, B, C, D, SP, HQ).';
+                        errorMessage.style.display = 'block';
+                    } else {
+                        errorMessage.style.display = 'none'; // Hide error message if input is valid
+                    }
+                });
+            
+                // Hide suggestions when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!suggestionsList.contains(e.target) && e.target !== coyInput) {
+                        suggestionsList.style.display = 'none';
+                    }
+                });
+            </script>
+            
+            <label for="feedback">Write down your Suggestion</label>
+            <textarea id="suggestion" name="Suggestion" rows="4" placeholder="Write your suggestion here..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>       
+        <style>
+            .submit-btn {
+                width: 120px;  /* Set width */
+                height: 40px;  /* Set height */
+            }
+        </style>
+    </form>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzEHGlLB21kL1AWvPnF1bzDKFVqCBoQ7irxiULbKlfPEwXn-LE_vvZhOst65_NDTUFe/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    console.log('Success!', response);
+                    // Redirect to the "Thank You" page
+                    window.location.href = 'thankyou.html'; // Update with the correct path to your thank-you page
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+
+    </script>
+</body>
+</html>
